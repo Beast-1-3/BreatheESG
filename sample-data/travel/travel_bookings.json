@@ -1,0 +1,80 @@
+[
+  {
+    "booking_id": "TRV-901",
+    "employee_id": "EMP-042",
+    "travel_type": "flight",
+    "origin": "LHR",
+    "destination": "JFK",
+    "travel_class": "economy",
+    "distance_km": 5580,
+    "cost": 650.00,
+    "currency": "GBP",
+    "booking_date": "2026-05-01"
+  },
+  {
+    "booking_id": "TRV-902",
+    "employee_id": "EMP-042",
+    "travel_type": "flight",
+    "origin": "CDG",
+    "destination": "XYZ",
+    "travel_class": "business",
+    "distance_km": null,
+    "cost": 1200.00,
+    "currency": "EUR",
+    "booking_date": "2026-05-02"
+  },
+  {
+    "booking_id": "TRV-903",
+    "employee_id": "EMP-088",
+    "travel_type": "hotel",
+    "hotel_nights": 4,
+    "cost": 800.00,
+    "currency": "USD",
+    "booking_date": "2026-05-03"
+  },
+  {
+    "booking_id": "TRV-904",
+    "employee_id": "EMP-015",
+    "travel_type": "taxi",
+    "distance_km": 18.5,
+    "cost": 45.00,
+    "currency": "USD",
+    "booking_date": "2026-05-04"
+  },
+  {
+    "booking_id": "TRV-905",
+    "employee_id": "EMP-015",
+    "travel_type": "taxi",
+    "distance_km": null,
+    "cost": 30.00,
+    "currency": "USD",
+    "booking_date": "2026-05-04"
+  },
+  {
+    "booking_id": "TRV-906",
+    "employee_id": "EMP-099",
+    "travel_type": "train",
+    "distance_km": 240,
+    "cost": 85.00,
+    "currency": "EUR",
+    "booking_date": "2026-05-05"
+  },
+  {
+    "booking_id": "TRV-907",
+    "employee_id": "EMP-101",
+    "travel_type": "hotel",
+    "hotel_nights": -2,
+    "cost": 150.00,
+    "currency": "USD",
+    "booking_date": "2026-05-06"
+  },
+  {
+    "booking_id": "TRV-908",
+    "employee_id": "EMP-102",
+    "travel_type": "train",
+    "distance_km": 150,
+    "cost": 40.00,
+    "currency": "XYZ",
+    "booking_date": "2026-05-07"
+  }
+]
