@@ -13,8 +13,20 @@ class Settings(BaseSettings):
     # Database
     DATABASE_URL: str = os.getenv("DATABASE_URL", "sqlite+aiosqlite:///./esg_platform.db")
     
+    @field_validator("DATABASE_URL", mode="before")
+    @classmethod
+    def assemble_db_url(cls, v: str) -> str:
+        if isinstance(v, str):
+            # Render PostgreSQL URL starts with postgres://, which SQLAlchemy 2.0 does not support.
+            # Additionally, async engines require the postgresql+asyncpg:// scheme.
+            if v.startswith("postgres://"):
+                return v.replace("postgres://", "postgresql+asyncpg://", 1)
+            elif v.startswith("postgresql://"):
+                return v.replace("postgresql://", "postgresql+asyncpg://", 1)
+        return v
+    
     # CORS
-    BACKEND_CORS_ORIGINS: List[str] = ["http://localhost:5173", "http://127.0.0.1:5173", "http://localhost:3000"]
+    BACKEND_CORS_ORIGINS: Union[List[str], str] = ["http://localhost:5173", "http://127.0.0.1:5173", "http://localhost:3000"]
     
     @field_validator("BACKEND_CORS_ORIGINS", mode="before")
     @classmethod
